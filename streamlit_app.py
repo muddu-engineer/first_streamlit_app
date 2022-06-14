@@ -16,8 +16,8 @@ def get_fruit_list():
 
 def insert_fruit_list(fruit):
   with my_cnx.cursor() as my_cur:
-    my_cur.execute("insert into fruit_load_list values('from streamlit')")
-    return "Thanks for adding"+fruit
+    my_cur.execute(f"insert into fruit_load_list values('{fruit}')")
+    return "Thanks for adding "+fruit
 
 streamlit.header('Breakfast Menu')
 streamlit.text('🥣 Omega 3 & Blueberry Oatmeal')
